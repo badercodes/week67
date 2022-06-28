@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-
+// import ColorButton from "./ColorButton";
+import Header from "./Header";
+import Hero from "./Hero";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <Hero
+        title="I am the title"
+        description="Lorem ipsum dolor sit amet. Aut autem iure qui galisum voluptatem aut consequatur iste qui explicabo beatae est omnis aliquid et nostrum laboriosam! Qui velit modi qui corrupti voluptas eum rerum iusto aut deleniti nesciunt ut laboriosam consequatur et voluptatem exercitationem. Ex nemo quis nam eius temporibus ut vitae dignissimos aut obcaecati galisum est consectetur quia.        "
+        button1="Go"
+        button2="Cancel"
+      />
+      <Hero
+        title="Buy more stuff now!!"
+        description="2nd Hero Lorem ipsum dolor sit amet. Aut autem iure qui galisum voluptatem aut consequatur iste qui explicabo beatae est omnis aliquid et nostrum laboriosam! Qui velit modi qui corrupti voluptas eum rerum iusto aut deleniti nesciunt ut laboriosam consequatur et voluptatem exercitationem. Ex nemo quis nam eius temporibus ut vitae dignissimos aut obcaecati galisum est consectetur quia.        "
+        button1="Buy"
+        button2="Buy More"
+      />
+    </>
   );
 }
 
