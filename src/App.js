@@ -1,11 +1,40 @@
-// import ColorButton from "./ColorButton";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import UsersListingScreen from "./UsersListingScreen";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import HomeScreen from "./HomeScreen";
+import LayoutRoute from "./LayoutRoute";
+import LoginScreen from "./LoginScreen";
 
-import CounterButton from "./CounterButton.js";
+const theme = createTheme({
+  palette: {
+    type: "light",
+    primary: {
+      main: "#151518",
+    },
+    secondary: {
+      main: "#f50057",
+    },
+    typography: {
+      fontFamily: "Caesar+Dressing",
+    },
+  },
+});
+
 function App() {
   return (
-    <>
-      <CounterButton />
-    </>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter>
+        <Switch>
+          <LayoutRoute
+            path="/users"
+            exact={true}
+            component={UsersListingScreen}
+          />
+          <LayoutRoute path="/" exact={true} component={HomeScreen} />
+          <LayoutRoute path="/login" exact={true} component={LoginScreen} />
+        </Switch>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
