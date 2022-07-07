@@ -4,6 +4,7 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 import HomeScreen from "./HomeScreen";
 import LayoutRoute from "./LayoutRoute";
 import LoginScreen from "./LoginScreen";
+import Blogs from "./Blogs";
 
 const theme = createTheme({
   palette: {
@@ -32,6 +33,7 @@ function App() {
           />
           <LayoutRoute path="/" exact={true} component={HomeScreen} />
           <LayoutRoute path="/login" exact={true} component={LoginScreen} />
+          <LayoutRoute path="/blog" exact={true} component={Blogs} />
         </Switch>
       </BrowserRouter>
     </ThemeProvider>
